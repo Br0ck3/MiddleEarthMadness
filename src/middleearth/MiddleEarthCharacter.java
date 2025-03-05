@@ -1,43 +1,48 @@
 package middleearth;
 
-/*
- * Abstract class representing a character in Middle-earth.
- */
+// Base class for all Middle-earth characters
 public abstract class MiddleEarthCharacter {
     protected String name;
     protected double health;
     protected double power;
 
-    /*
-     * Constructor to initialize a character.
-     * 
-     * @param name The name of the character
-     * @param health The health of the character.
-     * @param power The attack power of the character.
-     */
+    // Constructor sets up character attributes
     public MiddleEarthCharacter(String name, double health, double power) {
         this.name = name;
         this.health = health;
         this.power = power;
     }
     
-     /**
-     * Displays character details.
-     */
+    // Shows character details
     public void displayInfo() {
         System.out.println(getRace() + " " + name + " | Health: " + health + " | Power: " + power);
     }
 
-    /**
-     * Returns the race of the character.
-     */
+    // Returns the race of the character
     public abstract String getRace();
 
-    /**
-     * Executes an attack on another character.
-     *
-     * @param target The character being attacked.
-     * @return true if the attack was successful, false otherwise.
-     */
+    // Attacks another character
     public abstract boolean attack(MiddleEarthCharacter target);
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public double getHealth() {
+        return health;
+    }
+
+    public double getPower() {
+        return power;
+    }
+
+    // Setters
+    public void setHealth(double health) {
+        this.health = health;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
+    }
 }

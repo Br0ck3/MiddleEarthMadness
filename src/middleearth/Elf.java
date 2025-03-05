@@ -1,8 +1,6 @@
 package middleearth;
 
-/**
- * Represents an Elf character in Middle-earth.
- */
+//Represents an Elf character in Middle-earth.
 public class Elf extends MiddleEarthCharacter {
     public Elf(String name, double health, double power) {
         super(name, health, power);

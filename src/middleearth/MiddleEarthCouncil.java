@@ -1,22 +1,16 @@
 package middleearth;
 
-/**
- * Singleton class that represents the Middle-earth Council.
- */
+// Singleton for managing Middle-earth characters
 public class MiddleEarthCouncil {
     private static MiddleEarthCouncil instance;
     private CharacterManager characterManager;
 
-    /**
-     * Private constructor to prevent direct instantiation.
-     */
+    // Private constructor (only one instance allowed)
     private MiddleEarthCouncil() {
         characterManager = new CharacterManager();
     }
 
-    /**
-     * Returns the single instance of MiddleEarthCouncil.
-     */
+    // Returns the only instance of MiddleEarthCouncil
     public static MiddleEarthCouncil getInstance() {
         if (instance == null) {
             instance = new MiddleEarthCouncil();
@@ -24,9 +18,7 @@ public class MiddleEarthCouncil {
         return instance;
     }
 
-    /**
-     * Provides access to the CharacterManager.
-     */
+    // Gives access to the character manager
     public CharacterManager getCharacterManager() {
         return characterManager;
     }
