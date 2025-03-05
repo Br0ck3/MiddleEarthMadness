@@ -7,7 +7,7 @@ public class MiddleEarthCouncil {
 
     // Private constructor (only one instance allowed)
     private MiddleEarthCouncil() {
-        characterManager = new CharacterManager();
+        this.characterManager = new CharacterManager();
     }
 
     // Returns the only instance of MiddleEarthCouncil

@@ -1,5 +1,7 @@
 package middleearth;
 
+import java.util.Arrays;
+
 // Manages characters in Middle-earth
 public class CharacterManager {
     private MiddleEarthCharacter[] characters; // List of characters
@@ -82,6 +84,6 @@ public class CharacterManager {
 
     // Returns all characters
     public MiddleEarthCharacter[] getCharacters() {
-        return characters;
+        return Arrays.copyOf(characters, size); // Ensures only valid characters are returned
     }
 }

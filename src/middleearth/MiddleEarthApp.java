@@ -51,7 +51,9 @@ public class MiddleEarthApp {
 
         // Print all characters
         for (MiddleEarthCharacter character : manager.getCharacters()) {
-            System.out.println(character.getName() + " the " + character.getRace());
+            if (character != null) {
+                System.out.println(character.getName() + " the " + character.getRace());
+            }
         }
 
         scanner.close();
